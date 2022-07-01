@@ -15,7 +15,7 @@
         @foreach (var farm in Model.FarmsList)
         {
             <a asp-page="/FarmDetails" asp-route-id="@farm.Id" class="list-group-item list-group-item-action">@farm.Address,
-                @farm.Name</a>
+                @farm.Name</a><br/><br/>
         }
     </div>
 

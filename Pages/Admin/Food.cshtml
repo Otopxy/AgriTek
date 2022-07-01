@@ -14,18 +14,18 @@
             }
             <div class="card">
                 <div class="card-body">
-                    <h4 class="text-center">Food Details</Details></h4>
+                    <h3 class="text-center" style="background-color:lightgray">Food Details</Details></h3>
                     <form method="post">
                         <div asp-validation-summary="All" class="text-danger"></div>
 
                         <div class="form-group">
-                            <label asp-for="Input.FoodId"></label>
+                            <label asp-for="Input.FoodId"></label><br/>
                             <input asp-for="Input.FoodId" class="form-control" disabled />
                             <span asp-validation-for="Input.FoodId" class="text-danger"></span>
                         </div>
-
+                        <br/>
                         <div class="form-group">
-                            <label asp-for="Input.Description"></label>
+                            <label asp-for="Input.Description"></label><br/>
                             <input asp-for="Input.Description" class="form-control" />
                             <span asp-validation-for="Input.Description" class="text-danger"></span>
                         </div>
@@ -57,7 +57,7 @@
         </div>
 
         <div class="col-8 text-center">
-            <h3 class="mb-4">Food List</h3>
+            <h3 class="mb-4" style="background-color:lightgray">Food List</h3>
             <div>
                 <input class="form-control mb-4" type="text" id="foodInput" onkeyup="myFunction()"
                     placeholder="Search for Food">

@@ -19,7 +19,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head >
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MyFarmer</title>
@@ -43,19 +43,26 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
         integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
         crossorigin="anonymous"></script>
-
+    <style>
+        body{
+            
+            background-repeat: no-repeat;
+            background-color: antiquewhite;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-toggleable-lg navbar-light bg-beige border-bottom box-shadow
-            mb-3 fixed-top">
-            <a class="navbar-brand" href="/Index"><img class="nav-logo" src="/logo/final-logo6.png" alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_collapse"
+            mb-3 fixed-top  btn-light-green btn-md mt-5">
+            
+            @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_collapse"
                 aria-controls="navbar_collapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-            
+            </button>*@
+            @*background-image: url(Images/backback.jpg);*@
 
             @* Trying something new
             <div class='w3-card-2 topnav notranslate' id='topnav'>
@@ -77,15 +84,20 @@
 
 
                 
-                    <div class="nav-item">
+                    <div class="menu-item " style="align-left: 0 ; display: inline-block;">
                         @*<div style="overflow:auto;">*@
-                            <div class="w3-bar w3-right" style="width:100%;overflow:hidden;height:44px font-size:100px;">
+                            @*<div class="w3-bar w3-right" style="width:100%;overflow:hidden;height:44px font-size:100px;">*@
                                 @*<div class="collapse navbar-collapse" id="navbar_collapse">*@
                                     @*<ul class="navbar-nav ml-auto">*@
                                         @*<a class="nav-link font-weight-normal text-muted" href="/SearchResult">Reviews</a>&nbsp;             
                                         <a class="nav-link font-weight-normal text-muted" href="/NotFound">Map</a>&nbsp;*@
-                                        <a class="w3-bar-item w3-button" href="/Index" Style="font-size: 30px">Home</a>&nbsp;&nbsp;&nbsp;
-                                        <a class="w3-bar-item w3-button" href="/SearchResult" Style="font-size: 30px;">Reviews</a>&nbsp;&nbsp;&nbsp;             
+                                        <a class="navbar-brand" href="/Index"><img class="nav-logo" src="/Images/Flogo.jpg" alt="logo"></a>&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a class="navbar-brand" href="/Index"><img class="nav-logo" src="/Images/Home.png" alt="logo"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        @*<a class="menu-item menu-item-button" href="/Index" Style="font-size: 20px;">Home</a>&nbsp;&nbsp;&nbsp;*@
+                                        <button><a class="menu-item menu-item-button" href="/SearchResult" Style="font-size: 10px;">Reviews</a></button>&nbsp;&nbsp;&nbsp;             
                                         
                     
                     
@@ -95,62 +107,62 @@
                         @if (Role == "User")
                         {
                             
-                            <li class="nav-item dropdown">
+                            <ul class="nav-item dropdown">
                                 <a href="#!" class="nav-link text-info font-weight-bold text-muted dropdown-toggle"
                             id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                                     @User.Identity.Name</a>
-                                    <br/>
+                                    
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" asp-area="" asp-page="/Account/UserProfile">User Profile</a>
-                                    <a class="dropdown-item" asp-area="" asp-page="/Account/Logout">Logout</a>
+                                    <button><a class="dropdown-item" asp-area="" asp-page="/Account/UserProfile">User Profile</a></button>
+                                   <button> <a class="dropdown-item" asp-area="" asp-page="/Account/Logout">Logout</a></button>
 
                                 </div>
-                            </li>
+                            </ul>
                             
                         }
                         else if (Role == "Farmer")
                         {
-                            <li class="nav-item dropdown">
+                            <ul class="nav-item dropdown">
                                 <a class="nav-link text-info font-weight-bold text-muted dropdown-toggle"
                             id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                                     @User.Identity.Name</a>
-                                    <br/>
+                                    
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" asp-area="" asp-page="/Account/UserProfile">Farmer Profile</a>
-                                    <a class="dropdown-item" asp-area="" asp-page="/AddFarm">Add Farm</a>
-                                    <a class="dropdown-item" asp-area="" asp-page="/FarmsList">Farms List</a>
-                                    <a class="dropdown-item" asp-area="" asp-page="/Account/Logout">Logout</a>
+                                    <button><a class="dropdown-item" asp-area="" asp-page="/Account/UserProfile">Farmer Profile</a></button>
+                                    <button><a class="dropdown-item" asp-area="" asp-page="/AddFarm">Add Farm</a></button>
+                                    <button><a class="dropdown-item" asp-area="" asp-page="/FarmsList">Farms List</a></button>
+                                    <button><a class="dropdown-item" asp-area="" asp-page="/Account/Logout">Logout</a></button>
                                 </div>
-                            </li>
+                            </ul>
                         }
                         else if (Role == "Admin")
                         {
-                            <li class="nav-item dropdown">
+                            <ul class="nav-item dropdown">
                                 <a class="nav-link text-info font-weight-bold text-muted dropdown-toggle"
                             id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                                     @User.Identity.Name</a>
-                                    <br/>
+                                    
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" asp-area="" asp-page="/Admin/Index">Admin Dashboard</a>
-                                    <a class="dropdown-item" asp-area="" asp-page="/Account/Logout">Logout</a>
+                                    <button><a class="dropdown-item" asp-area="" asp-page="/Admin/Index">Admin Dashboard</a></button>
+                                    <button><a class="dropdown-item" asp-area="" asp-page="/Account/Logout">Logout</a></button>
                                 </div>
-                            </li>
+                            </ul>
                         }
                         else
                         {
-                            <li class="nav-item dropdown">
+                            <ul class="nav-item dropdown">
                                 <a class="nav-link text-info font-weight-bold text-muted dropdown-toggle"
                             id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                                     Undefined User</a>
                                     <br/>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" asp-area="" asp-page="/Account/Logout">Logout</a>
+                                    <button><a class="dropdown-item" asp-area="" asp-page="/Account/Logout">Logout</a></button>
                                 </div>
-                            </li>
+                            </ul>
                         }
                         <br/>
 
@@ -168,8 +180,9 @@
                     }
                     else
                     {
-                        <a class="w3-bar-item w3-button" href="/Account/Login" Style="font-size: 30px">Login</a>
-                        <a class="w3-bar-item w3-button" href="/Account/Register" Style="font-size: 30px">Register</a>
+                        <button><a class="menu-item menu-item-button" href="/Account/Login" Style="font-size: 10px">Login  </a></button>
+                        <button><a class="menu-item menu-item-button" href="/Account/Register" Style="font-size: 10px">Register</a></button>
+                        <button><a class="menu-item menu-item-button" href="/AboutUs" Style="font-size: 10px">About Us</a></button>
                         @*<li class="nav-item">
                             <a class="nav-link font-weight-normal text-muted" href="/Account/Login">Login</a>
                         </li>
@@ -213,12 +226,12 @@
 
 
     @* <footer class="border-top footer text-muted bg-beige border-top box-shadow mt-3 fixed-bottom"> *@
-    <footer class="border-top footer text-muted bg-beige border-top box-shadow mt-3">
+    <footer class="border-top footer text-muted bg-beige border-top box-shadow mt-3 btn-light-green btn-md "">
         <div class="container text-center">
-            <a class="mr-4" asp-area="" asp-page="/Account/Login">Login</a>&nbsp;&nbsp;
-            <a class="mr-4" asp-area="" asp-page="/Account/Register">Register</a>&nbsp;&nbsp;
-            <a class="mr-4" asp-area="" asp-page="/SearchResult">Farms</a>
-            <br>
+            <a class="navbar-brand" href="/Index"><img class="nav-logo" src="/Images/Flogo.jpg" alt="logo"></a>&nbsp;&nbsp;&nbsp;
+            <button><a class="mr-4" asp-area="" asp-page="/Account/Register">Register</a></button>&nbsp;&nbsp;
+            <button><a class="mr-4" asp-area="" asp-page="/SearchResult">Locate Farms</a></button>
+            <br/>
             &copy; 2022 - Powered By Premium Technology (ELEV8/MICROSOFT ATO)!
         </div>
     </footer>

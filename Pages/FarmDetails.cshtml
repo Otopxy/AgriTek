@@ -11,6 +11,7 @@
         var userName = User.Identity.Name;
         var user = await userManager.FindByNameAsync(userName);
         var roles = await userManager.GetRolesAsync(user);
+        //var email = await userManager.GetRolesAsync(user);
         //NOTIFICATION: Multiple roles are not supported.
         foreach (var role in roles)
         {
@@ -63,8 +64,8 @@
         <div class="col-md-9 mb-4">
             <div class="card mb-4">
                 <div class="card-header d-flex justify-content-between">
-                    <h4 class="card-title">@Model.InputFarm.Name</h4>
-                    <p class="h4">Rating: 4</p>
+                    <h3 class="card-title" style="background-color:lightgray ;">@Model.InputFarm.Name</h3>
+                    <p class="h4">Details</p>
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
@@ -78,6 +79,7 @@
                             </span>@Model.InputFarm.Description</li>
                     </ul>
                 </div>
+                @*@if (Role == "Farmer" &&  ==)*@
                 @if (Role == "Farmer")
                 {
                     <div class="card-footer">
@@ -91,18 +93,18 @@
                 <form method="POST">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Post a Review for @Model.InputFarm.Name</h4>
+                            <h3 style="background-color:lightgray ;">Post a Review for @Model.InputFarm.Name</h3>
                         </div>
                         <div class="card-body">
                             <div asp-validation-summary="All" class="text-danger"></div>
                             <div class="form-group">
-                                <label asp-for="InputReview.Message"></label>
+                                <label asp-for="InputReview.Message"></label><br/>
                                 <textarea asp-for="InputReview.Message" class="form-control" cols="30" rows="5"></textarea>
                                 <span asp-validation-for="InputReview.Message" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label asp-for="InputReview.Rating"></label>
-                                <input asp-for="InputReview.Rating" class="form-control" type="number" />
+                                <label asp-for="InputReview.Rating"></label><br/>
+                                <input asp-for="InputReview.Rating" class="form-control" type="number" min="0" max="5"/>
                                 <span asp-validation-for="InputReview.Rating" class="text-danger"></span>
                             </div>
                             <div class="btn-group">
@@ -148,6 +150,7 @@
                                                 <small>Rating: @c.Rating/5</small>
                                                 <small>Farm: @c.Farm.Name</small>
                                             </div>
+                                            <br/>
                                             @if (Role == "User")
                                             {
                                                 @if (c.Customer.UserName == User.Identity.Name)
@@ -180,6 +183,7 @@
                 </div>
             </div>
         </div>
+        <br/>
         <div class="col-md-3">
             <div class="card mb-4">
                 <div class="card-header">

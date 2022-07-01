@@ -112,7 +112,7 @@ namespace MyFarmer
                 }
             }
 
-            // WARNING: For testing ONLY. Do NOT do it on a production system!
+            // 
             // Create an Administrator. 
             string adminEmail = "admin@admin.com";
             string adminPass = "Admin123!"; // terrible password

@@ -22,25 +22,25 @@
             }
             <div class="card">
                 <div class="card-body">
-                    <h4 class="text-center">User Details</h4>
+                    <h3 class="text-center" style="background-color:lightgray">User Details</h3>
                     <form method="post">
                         <div asp-validation-summary="All" class="text-danger"></div>
 
                         <div class="form-group">
-                            <label asp-for="Input.UserId"></label>
+                            <label asp-for="Input.UserId"></label><br/>
                             <input asp-for="Input.UserId" class="form-control" disabled />
                             <span asp-validation-for="Input.UserId" class="text-danger"></span>
                         </div>
                         <br/>
-                        <div></div>
+                        
                         <div class="form-group">
-                            <label asp-for="Input.UserName"></label>
+                            <label asp-for="Input.UserName"></label><br/>
                             <input asp-for="Input.UserName" class="form-control" />
                             <span asp-validation-for="Input.UserName" class="text-danger"></span>
                         </div>
                         <br/>
                         <div class="form-group">
-                            <label asp-for="Input.Email"></label>
+                            <label asp-for="Input.Email"></label><br/>
                             <input asp-for="Input.Email" class="form-control" />
                             <span asp-validation-for="Input.Email" class="text-danger"></span>
                         </div>
@@ -48,23 +48,26 @@
                         @if (String.IsNullOrEmpty(Model.Input.UserId))
                         {
                             <div class="form-group">
-                                <label asp-for="Input.Password"></label>
+                                <label asp-for="Input.Password"></label><br/>
                                 <input asp-for="Input.Password" class="form-control" />
                                 <span asp-validation-for="Input.Password" class="text-danger"></span>
                             </div>
+                            <br/>
                             <div class="form-group">
-                                <label asp-for="Input.ConfirmPassword"></label>
+                                <label asp-for="Input.ConfirmPassword"></label><br/>
                                 <input asp-for="Input.ConfirmPassword" class="form-control" />
                                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                             </div>
+                            
                         }
                         else
                         {
                             <input type="hidden" asp-for="Input.Password" />
                             <input type="hidden" asp-for="Input.ConfirmPassword" />
                         }
+                        <br/>
                         <div class="form-group">
-                            <label asp-for="Input.Role"></label>
+                            <label asp-for="Input.Role"></label><br/>
                             <select asp-for="Input.Role" class="form-control">
                                 @foreach (var r in Model.RolesList)
                                 {
@@ -99,7 +102,7 @@
         </div>
 
         <div class="col-8 text-center">
-            <h3 class="mb-4">User List</h3>
+            <h3 class="mb-4" style="background-color:lightgray">User List</h3>
             <div>
                 <input class="form-control mb-4" type="text" id="myInput" onkeyup="myFunction()"
                     placeholder="Search for email">

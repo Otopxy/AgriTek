@@ -11,7 +11,7 @@
     <div class="row mb-5">
 
         <div class="col-12 text-center">
-            <h1 class="mb-4">Farm List</h1>
+            <h1 class="mb-4" style="background-color:lightgray">Farm List</h1>
             <div>
                 <input class="form-control mb-4" type="text" id="farmInput" onkeyup="farmFunction()"
                     placeholder="Search for Farm Name">
@@ -62,18 +62,18 @@
             }
             <div class="card mb-5">
                 <div class="card-body mb-5">
-                    <h4 class="text-center">Farm Details</h4>
+                    <h4 class="text-center" style="background-color:lightgray">Farm Details</h4>
                     <form method="post">
                         <div asp-validation-summary="All" class="text-danger"></div>
 
                         <div class="form-group">
-                            <label asp-for="Input.FarmId"></label>
+                            <label asp-for="Input.FarmId"></label><br/>
                             <input asp-for="Input.FarmId" class="form-control" disabled />
                             <span asp-validation-for="Input.FarmId" class="text-danger"></span>
                         </div>
-
+                        <br/>
                         <div class="form-group">
-                            <label asp-for="Input.Farmer"></label>
+                            <label asp-for="Input.Farmer"></label><br/>
                             <select asp-for="Input.Farmer.UserName" class="form-control">
                                 @foreach (var f in Model.FarmersList)
                                 {
@@ -81,33 +81,33 @@
                                 }
                             </select>
                         </div>
-
+                        <br/>
                         <div class="form-group">
-                            <label asp-for="Input.Name"></label>
+                            <label asp-for="Input.Name"></label><br/>
                             <input asp-for="Input.Name" class="form-control" />
                             <span asp-validation-for="Input.Name" class="text-danger"></span>
                         </div>
-
+                        <br/>
                         <div class="form-group">
-                            <label asp-for="Input.Email"></label>
+                            <label asp-for="Input.Email"></label><br/>
                             <input asp-for="Input.Email" class="form-control" />
                             <span asp-validation-for="Input.Email" class="text-danger"></span>
                         </div>
-
+                        <br/>
                         <div class="form-group">
-                            <label asp-for="Input.Phone"></label>
+                            <label asp-for="Input.Phone"></label><br/>
                             <input asp-for="Input.Phone" class="form-control" />
                             <span asp-validation-for="Input.Phone" class="text-danger"></span>
                         </div> 
-
+                        <br/>
                          <div class="form-group">
-                            <label asp-for="Input.Address"></label>
+                            <label asp-for="Input.Address"></label><br/>
                             <input asp-for="Input.Address" class="form-control" />
                             <span asp-validation-for="Input.Address" class="text-danger"></span>
                         </div> 
-
+                        <br/>
                          <div class="form-group">
-                            <label asp-for="Input.Description"></label>
+                            <label asp-for="Input.Description"></label><br/>
                             <input asp-for="Input.Description" class="form-control" />
                             <span asp-validation-for="Input.Description" class="text-danger"></span>
                         </div> 

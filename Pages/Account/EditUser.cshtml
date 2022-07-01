@@ -17,13 +17,14 @@
                     <div asp-validation-summary="All" class="text-danger"></div>
                     <input type="hidden" asp-for="Input.UserId">
                     <div class="form-group">
-                        <label asp-for="Input.Username"></label>
+                        <label asp-for="Input.Username"></label><br/>
                         <input asp-for="Input.Username" class="form-control" readonly />
                         <span asp-validation-for="Input.Username" class="text-danger"></span>
                     </div>
-
+                    <br/>
+                    
                     <div class="form-group">
-                        <label asp-for="Input.Email"></label>
+                        <label asp-for="Input.Email"></label><br>
                         <input asp-for="Input.Email" class="form-control" />
                         <span asp-validation-for="Input.Email" class="text-danger"></span>
                     </div>

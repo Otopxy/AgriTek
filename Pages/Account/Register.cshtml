@@ -3,28 +3,32 @@
 @{
     ViewData["Title"] = "Register";
 }
-<div class="container">
+
+<div class="container" >
     <div class="row">
-    <div class="col-md-6 offset-3">
+    <div class="col-md-6 offset-3" >
         <form method="post">
-            <h4>Create a new account.</h4>
+            <h3 style="background-color:lightgray">Create a new account.</h3>
             <hr />
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Input.Email"></label>
+                <label asp-for="Input.Email"></label><br/>
                 <input asp-for="Input.Email" class="form-control" />
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
+            <br/>
             <div class="form-group">
-                <label asp-for="Input.Password"></label>
+                <label asp-for="Input.Password"></label><br/>
                 <input asp-for="Input.Password" class="form-control" />
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
+            <br/>
             <div class="form-group">
-                <label asp-for="Input.ConfirmPassword"></label>
+                <label asp-for="Input.ConfirmPassword"></label><br/>
                 <input asp-for="Input.ConfirmPassword" class="form-control" />
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
+            <br/>
             <div class="form-check">
                 <input asp-for="Input.RegisterMeAsFarmer" class="form-check-input" id="isFarmerLoginTypeChecked"/>
                 <label asp-for="Input.RegisterMeAsFarmer" class="form-check-label">

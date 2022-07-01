@@ -104,3 +104,9 @@ C:\Users\DELL Latitude E747O\Desktop\MyFarmer\obj\Debug\net5.0\ref\MyFarmer.dll
 C:\Users\DELL Latitude E747O\Desktop\MyFarmer\obj\Debug\net5.0\MyFarmer.pdb
 C:\Users\DELL Latitude E747O\Desktop\MyFarmer\obj\Debug\net5.0\MyFarmer.genruntimeconfig.cache
 c:\Users\DELL Latitude E747O\Desktop\MyFarmer\obj\Debug\net5.0\refint\MyFarmer.dll
+C:\Users\DELL Latitude E747O\Desktop\MyFarmer\bin\Debug\net5.0\publish\web.config
+C:\Users\DELL Latitude E747O\Desktop\MyFarmer\bin\Debug\net5.0\publish\appsettings.Development.json
+C:\Users\DELL Latitude E747O\Desktop\MyFarmer\bin\Debug\net5.0\publish\appsettings.json
+C:\Users\DELL Latitude E747O\Desktop\MyFarmer\bin\Debug\net5.0\publish\MyFarmer.deps.json
+C:\Users\DELL Latitude E747O\Desktop\MyFarmer\bin\Debug\net5.0\publish\MyFarmer.runtimeconfig.json
+C:\Users\DELL Latitude E747O\Desktop\MyFarmer\obj\Debug\net5.0\Razor\Pages\AboutUs.cshtml.g.cs

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Farms List";
 }
 <div class="container">
-    <h4 class="my-4">Farms list for Farmer @Model.Farmer.UserName</h4>
+    <h3 class="my-4" style="background-color:lightgray">Farms list for Farmer @Model.Farmer.UserName</h3>
     @if (Model.Message != null)
     {
         <div>
@@ -25,10 +25,13 @@
                         <p><span class="font-weight-bold">Email: </span>@farm.Email</p>
                         <p><span class="font-weight-bold">Phone: </span>@farm.Phone</p>
                         <p><span class="font-weight-bold">Address: </span>@farm.Address</p>
+                        
                     </div>
                     <div class="card-footer">
                         <a asp-page="/FarmDetails" asp-route-id="@farm.Id" class="btn btn-primary">details → </a>
                     </div>
+                    <br/>
+                        <br/>
                 </div>
             </div>
         }    

@@ -61,7 +61,7 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h3 class="mt-2 mb-3">My Info</h3>
+                            <h3 class="mt-2 mb-3" style="background-color:lightgray">My Info</h3>
                             <input type="hidden" asp-for="currUser.Id">
                             <p><span class="large mark">Username:</span> @Model.currUser.UserName</p>
                             <p><span class="large mark">Email:</span> @Model.currUser.Email</p>
@@ -79,7 +79,7 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h3 class="mt-2 mb-3">Change Password</h3>
+                            <h3 class="mt-2 mb-3" style="background-color:lightgray;">Change Password</h3>
                             <input type="hidden" asp-for="currUser.Id">
                             <a asp-page="/Account/ChangePassword" asp-route-id="@Model.currUser.Id"
                             class="btn btn-sm btn-primary" role="button">Change My Password</a>
@@ -95,7 +95,7 @@
                 <div class="p-1 h-100">
                     <div class="card h-100">
                         <div class="card-body overflow-auto">
-                            <h3 class="mt-2 mb-3">My Posts</h3>
+                            <h3 class="mt-2 mb-3" style="background-color:lightgray">My Posts</h3>
                             @if (@Model.custCommentsList.Any())
                             {
                                 <div class="list-group">
@@ -115,6 +115,7 @@
                                                     <small>Rating: @c.Rating/5</small>
                                                     <small>Farm: @c.Farm.Name</small>
                                                 </div>
+                                                <br/>
                                                 <div class="d-inline d-flex justify-content-between mt-3">
                                                     <a asp-page="/Account/EditPost" asp-route-id="@c.Id"
                                             class="btn btn-sm btn-primary" role="button">Edit</a>
@@ -140,6 +141,7 @@
                             }
                         </div>
                     </div>
+                    <br/>
                 </div>
 
             </div>

@@ -11,7 +11,7 @@
     <div class="row mb-5">
 
         <div class="col-12 text-center">
-            <h1 class="mb-4">User Comments List</h1>
+            <h1 class="mb-4" style="background-color:lightgray">User Comments List</h1>
             <div>
                 <input class="form-control mb-4" type="text" id="commentInput" onkeyup="commentFunction()"
                     placeholder="Search for User Email">
@@ -26,7 +26,7 @@
                             <th>Date</th>
                             <th>Message</th>
                             <th>Rating</th>
-                             <th>View</th>
+                             @*<th>View</th>*@
                         </tr>
                     </thead>
                     <tbody>
@@ -39,9 +39,9 @@
                                 <td>@c.Created.Date</td>
                                 <td>@c.Message</td>
                                 <td>@c.Rating</td>
-                                <form action="" method="POST">
+                                @*<form action="" method="GET">
                                     <td><input type="submit" asp-route-id="@c.Id" value="View Detais"></td>
-                                </form>
+                                </form>*@
                             </tr>
                         }
                     </tbody>
@@ -58,7 +58,7 @@
                     @Model.Message
                 </div>
             }
-            <div class="card mb-5">
+            @*<div class="card mb-5">
                 <div class="card-body mb-5">
                     <h4 class="text-center">User Comment Details</h4>
                     <form method="post">
@@ -131,7 +131,7 @@
                     </form>
                 </div>
 
-            </div>
+            </div>*@
         </div>
        
 

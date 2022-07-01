@@ -43,25 +43,25 @@ namespace MyFriends2.Pages
         public class InputModelFarm
         {
             [Required]
-            [Display(Name = "Farm Name")]
+            [Display(Name = "Farm Name:")]
             public string Name { get; set; }
 
             [Required]
             [EmailAddress]
-            [Display(Name = "Email")]
+            [Display(Name = "Email Address:")]
             public string Email { get; set; }
 
             [Required]
             [DataType(DataType.PhoneNumber)]
-            [Display(Name = "Phone")]
+            [Display(Name = "Phone Number:")]
             public string Phone { get; set; }
 
             [Required]
-            [Display(Name = "Farm Address")]
+            [Display(Name = "Farm Address:")]
             public string Address { get; set; }
 
             [Required]
-            [Display(Name = "Farm Description and Prices")]
+            [Display(Name = "Farm Description and Prices:")]
             public string Description { get; set; }
         }
         [BindProperty]
